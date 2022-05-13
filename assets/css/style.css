@@ -1,0 +1,157 @@
+:root {
+  --darkblue: #445976;
+  --lightgray: #f2f2f2;
+  --gray: #717171;
+  --orange: #f9ab46;
+  --darkgray: #232323;
+  --nerko: 'Nerko One', cursive;
+  --gochi: 'Gochi Hand', cursive;
+  --opensans: 'Open Sans', sans-serif;
+}
+
+.bg-gray {
+  background-color: var(--lightgray);
+  max-width: 100%;
+  padding: 50px 0;
+}
+
+footer .bg-gray {
+  padding: 20px 0;
+}
+
+header {
+  padding: 10px;
+  min-height: 500px;
+  border-bottom: 10px solid #f9ab46;
+}
+
+header h3,
+header p,
+header label {
+  font-family: var(--opensans);
+  color: var(--gray);
+}
+
+header h3,
+header label {
+  font-weight: bold;
+}
+
+header p {
+  margin: 15px 0;
+}
+
+.logo {}
+
+.hero {
+  background: url(../images/hero_img_taller.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#shelter-listings {
+  padding-right: 20px;
+  font-family: var(--opensans);
+}
+
+#shelter-listings li a {
+  font-family: var(--opensans);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: var(--darkgray);
+}
+
+.btn.submit {
+  background-color: var(--orange);
+  font-family: var(--opensans);
+  color: #fff;
+  font-weight: 700;
+}
+
+.btn.submit:hover {
+  opacity: .8;
+}
+
+.icon svg {
+  fill: #f9ab46;
+  stroke: #f9ab46;
+}
+
+.planning-to-adopt {
+  color: var(--darkgray);
+}
+
+.planning-to-adopt h2 {
+  font-family: var(--nerko);
+  color: var(--darkgray);
+  font-size: 3em;
+}
+
+.row .adoption-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: var(--opensans);
+  padding: 0 30px;
+}
+
+.row .adoption-info h3 {
+  font-weight: 700;
+  color: var(--gray);
+  margin: 20px 0px 10px;
+}
+
+.row .adoption-info .btn {
+  color: var(--orange);
+  border: 1px solid #f9ab46;
+  background-color: transparent;
+  color: var(--darkgray);
+  margin: 20px 0;
+}
+
+.row .adoption-info .btn:hover {
+  color: #fff;
+  border: 1px solid #f9ab46;
+  background-color: var(--orange);
+  opacity: .8;
+}
+
+.row .adoption-info p {}
+
+footer .col-2 {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+footer .footer-logo {
+  padding: 10px;
+  min-height: 100px;
+}
+
+#shelter-listings {}
+
+#shelter-listings ul {
+  padding-left: 0px;
+  overflow: auto;
+}
+
+#shelter-listings ul li {
+  list-style: none;
+}
+
+#shelter-listings li.name {
+  float: left;
+}
+
+#shelter-listings li.address {
+  float: left;
+  clear: both;
+}
+
+#shelter-listings li.distance {
+  float: right;
+}
