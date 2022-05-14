@@ -161,8 +161,12 @@
                 style="border: 0"
                 loading="lazy"
                 allowfullscreen
-                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJVTPokywQkFQRmtVEaUZlJRA&key=AIzaSyAfZnNj2XbhrrcYJGi5ep89U4QwEsvlIMs"
-              ></iframe>
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBfdOo81NF8nSCKTzVEZrucPVkMT8IJHoQ
+    &q=Space+Needle,Seattle+WA"
+              >
+                ></iframe
+              >
             </div>
           </div>
         </div>
@@ -264,11 +268,6 @@
         </div>
       </div>
     </footer>
-    <!-- Google places api -->
-    <script
-      async
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfdOo81NF8nSCKTzVEZrucPVkMT8IJHoQ&libraries=places&callback=initMap"
-    ></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script
@@ -279,5 +278,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
     <script src="./assets/js/script.js"></script>
+    <!-- Google places api -->
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfdOo81NF8nSCKTzVEZrucPVkMT8IJHoQ&libraries=places&callback=initMap"
+    ></script>
   </body>
 </html>
