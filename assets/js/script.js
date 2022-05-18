@@ -128,11 +128,15 @@ function orgList(data) {
     listing =
       listing +
       `<ul>
-        <li class="distance">${data.organizations[i].distance}</li>
+        <li class="distance">${data.organizations[i].distance.toFixed(2)}</li>
         <li class="name">
-          <a class="" href="${data.organizations[i].url}">${data.organizations[i].name}</a>
+          <a class="" href="${data.organizations[i].url}">${
+        data.organizations[i].name
+      }</a>
         </li>
-        <li class="address">${data.organizations[i].address}</li>
+        <li class="address">${data.organizations[i].address.city}, ${
+        data.organizations[i].address.state
+      } ${data.organizations[i].address.postcode}</li>
       </ul>`;
   }
   shelterList.innerHTML = listing;
