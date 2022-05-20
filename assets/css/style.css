@@ -54,6 +54,9 @@ header p {
   background-repeat: no-repeat;
   background-position: center;
 }
+.hide {
+  display: none;
+}
 
 .shelter-listings-wrap {
   padding: 0px 100px;
