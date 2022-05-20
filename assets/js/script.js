@@ -14,6 +14,7 @@ var nextBtn = document.querySelector("#nextBtn");
 var pageNumber = 1;
 var map;
 
+// call google api for autocomplete
 function initMap() {
   var autocomplete = new google.maps.places.Autocomplete(cityInput, {
     componentRestrictions: { country: "us" },
@@ -36,13 +37,14 @@ function initMap() {
 
   map = new google.maps.Map(document.querySelector("#map"), {
     center: {
-      lat: 47.6062,
-      lng: 122.3321,
+      lat: 37.0902,
+      lng: -95.7129,
     },
-    zoom: 10,
+    zoom: 4,
   });
 }
 
+// center map on user location
 function centerMap() {
   map = new google.maps.Map(document.querySelector("#map"), {
     center: {
@@ -85,7 +87,7 @@ function search(event) {
       token = data.access_token;
     })
     .then(() => {
-      pageNumber = 1;
+      // pageNumber = 1;
       getOrg();
     });
 
@@ -93,27 +95,7 @@ function search(event) {
   centerMap();
 }
 
-nextBtn.addEventListener("click", nextPage);
-function nextPage(event) {
-  event.preventDefault();
-  listing = "";
-  pageNumber++;
-  // city input removes USA from Google Places auto complete; PetFinder API doesn't return results
-  getOrg();
-}
-
-firstBtn.addEventListener("click", function (event) {
-  event.preventDefault();
-  PageOne();
-});
-
-function PageOne() {
-  console.log("pageone");
-  listing = "";
-  pageNumber = 1;
-  getOrg();
-}
-
+// display petfinder api results
 const shelterTitle1 = document.querySelector("#shelterQuantity1");
 const shelterTitle2 = document.querySelector("#shelterQuantity2");
 const shelterList = document.querySelector("#shelter-listings");
@@ -121,7 +103,8 @@ var listing = "";
 
 function orgList(data) {
   console.log(data);
-  shelterTitle1.textContent = data.pagination.total_count;
+  //TODO: display lengths from pagination
+  shelterTitle1.textContent = data.organizations.length;
   shelterTitle2.textContent = data.organizations.length;
   shelterList.innerHTML = "";
   for (var i = 0; i < data.organizations.length; i++) {
@@ -167,3 +150,26 @@ function getOrg() {
     })
     .catch((err) => console.error(err));
 }
+
+// display next page of results
+// nextBtn.addEventListener("click", nextPage);
+// function nextPage(event) {
+//   event.preventDefault();
+//   listing = "";
+//   pageNumber++;
+//   // city input removes USA from Google Places auto complete; PetFinder API doesn't return results
+//   getOrg();
+// }
+
+// display first page of results
+// firstBtn.addEventListener("click", function (event) {
+//   event.preventDefault();
+//   PageOne();
+// });
+
+// function PageOne() {
+//   console.log("pageone");
+//   listing = "";
+//   pageNumber = 1;
+//   getOrg();
+// }
