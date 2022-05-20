@@ -85,10 +85,6 @@ header p {
   font-style: italic;
 }
 
-.shelter-listings-wrap {
-  padding: 0px 100px;
-}
-
 #shelter-listings {
   padding-right: 20px;
   font-family: var(--opensans);
@@ -113,13 +109,6 @@ header p {
   background-color: var(--gray);
   font-family: var(--opensans);
   color: var(--white);
-  font-weight: 700;
-}
-
-.btn.clear {
-  background-color: var(--gray);
-  font-family: var(--opensans);
-  color: #fff;
   font-weight: 700;
 }
 
@@ -200,15 +189,6 @@ footer .footer-logo {
   background-position: center;
 }
 
-<<<<<<< HEAD
-.hide {
-  display: none;
-}
-
-=======
->>>>>>> 3903352df00cba5c3f4e9c84c38eb916c4f6eb78
-
-#shelter-listings {}
 
 #shelter-listings ul {
   padding-left: 0px;
@@ -239,12 +219,9 @@ footer .footer-logo {
   .planning-to-adopt {
     padding: 40px 20px;
   }
-<<<<<<< HEAD
-=======
   .shelter-graphic-wrap {
     padding: 0px 0px 0 100px;
   }
->>>>>>> 3903352df00cba5c3f4e9c84c38eb916c4f6eb78
 }
 
 /* Desktops  */
@@ -265,12 +242,9 @@ footer .footer-logo {
   .logo {
     width: 70%;
   }
-<<<<<<< HEAD
-=======
   .shelter-graphic-wrap {
     padding: 0px 20px 0 100px;
   }
->>>>>>> 3903352df00cba5c3f4e9c84c38eb916c4f6eb78
 }
 
 /* Tablets  */
