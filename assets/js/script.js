@@ -6,6 +6,8 @@
 //person who generated api key is going to have to 
 
 // Search bar autocomplete
+
+
 const cityInput = document.querySelector("#city-input");
 const clearSearch = document.querySelector("#clear-search");
 var autocomplete;
@@ -83,6 +85,9 @@ function search(event) {
   var key = "yZJnxnm7MRDykndmWxlpmmsUeSOcn0MwkYF7nE1CpCVnBmztQF";
   var secret = "OQtdFz7vReUXiWwtSWmhpe3nSt1gdXfF1P4Q0lM7";
   var token;
+  var searchList= document.getElementById("list-head")
+
+  searchList.removeAttribute("class", "hide")
 
   // get authorization token
   fetch("https://api.petfinder.com/v2/oauth2/token", {

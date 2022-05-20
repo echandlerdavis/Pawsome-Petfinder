@@ -1,4 +1,5 @@
 # Project-1-Group-7 - Pawsome Pet Finder
+
  **What does this application do and why?**
 
 * Searches for pet adoption organizations based on a user's input of a city
@@ -38,6 +39,8 @@ GitHub Repository: https://github.com/echandlerdavis/Project-1-Group-7
 * Third party APIs
 * Bootstrap
 * Google fonts
+* Google Maps API
+* Petfinder API
 
 **Contributor Roles**
 
