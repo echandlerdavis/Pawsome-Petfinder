@@ -1,73 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="With more adoptable pets than ever, we have an urgent need for pet adopters. Search for dogs, cats, and other available pets for adoption near you."
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pawsome Petfinder</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Nerko+One&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="With more adoptable pets than ever, we have an urgent need for pet adopters. Search for dogs, cats, and other available pets for adoption near you." />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Pawsome Petfinder</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <link rel="stylesheet" href="./assets/css/reset.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Nerko+One&family=Open+Sans:wght@400;700&display=swap"
-    rel="stylesheet" />
-</head>
-
-<body class="d-flex flex-column min-vh-100">
-  <header class="hero">
-    <div class="row g-0">
-      <div
-        class="col-8 col-xl-4 offset-1 offset-xl-1 offset-md-1 offset-sm-1 d-flex flex-column my-5 aos-init aos-animate col-lg-5 col-md-6 col-sm-6"
-        data-aos="fade-up">
-        <figure class="d-flex flex-column">
-          <img class="logo" src="./assets/images/logo.png" alt="Pawsome Petfinder Logo" />
-        </figure>
-        <div class="card">
-          <div class="card-body bg-white">
-            <h3>Find a Pet Shelter Near By</h3>
-            <p>
-              There's a four-legged friend out there that's paw-fect. Search
-              for dogs, cats, and other available pets for adoption near you.
-              Look Meow!
-            </p>
-            <form>
-              <label for="" class="form-label my-0">Search for a City:</label>
-              <input class="form-control my-2" type="search" placeholder="Search" id="city-input" />
-              <button class="btn submit my-2" style="width: 100%" type="submit" id="search-button">
-                Search
-              </button>
-              <button class="btn clear my-2" style="width: 100%" type="submit" id="clear-search">
-                Clear Results
-              </button>
-            </form>
+  <body class="d-flex flex-column min-vh-100">
+    <header class="hero">
+      <div class="row g-0">
+        <div
+          class="col-8 col-xl-4 offset-1 offset-xl-1 offset-md-1 offset-sm-1 d-flex flex-column my-5 aos-init aos-animate col-lg-5 col-md-6 col-sm-6"
+          data-aos="fade-up"
+        >
+          <figure class="d-flex flex-column">
+            <img
+              class="logo"
+              src="./assets/images/logo.png"
+              alt="Pawsome Petfinder Logo"
+            />
+          </figure>
+          <div class="card">
+            <div class="card-body bg-white">
+              <h3>Find a Pet Shelter Near By</h3>
+              <p>
+                There's a four-legged friend out there that's paw-fect. Search
+                for dogs, cats, and other available pets for adoption near you.
+                Look Meow!
+              </p>
+              <form>
+                <label for="" class="form-label my-0">Search for a City:</label>
+                <input
+                  class="form-control my-2"
+                  type="search"
+                  placeholder="Search"
+                  id="city-input"
+                />
+                <button
+                  class="btn submit my-2"
+                  style="width: 100%"
+                  type="submit"
+                  id="search-button"
+                >
+                  Search
+                </button>
+                <button
+                  class="btn clear my-2"
+                  style="width: 100%"
+                  type="submit"
+                  id="clear-search"
+                >
+                  Clear Results
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <section class="bg-gray">
-      <div class="container-fluid shelter-listings-wrap">
-        <div class="row">
-          <div class="col-12">
-            <h3>
-              We Found <span id="shelterQuantity1"></span> Shelters Near You
-            </h3>
-            <p>
-              Showing 1 - <span id="shelterQuantity2"></span> | The Pawesome
-              Pet Finder is powered by Pet Finder's API
-            </p>
-            <hr />
-          </div>
-          <div class="col-12 col-sm-6" id="shelter-listings">
-            <!-- <div class="row">
+    <main>
+      <section class="bg-gray">
+        <div class="container-fluid shelter-listings-wrap">
+          <div class="row">
+            <div class="col-12">
+              <h3>
+                We Found <span id="shelterQuantity1"></span> Shelters Near You
+              </h3>
+              <p>
+                Showing 1 - <span id="shelterQuantity2"></span> | The Pawesome
+                Pet Finder is powered by Pet Finder's API
+              </p>
+              <hr />
+            </div>
+            <div class="col-12 col-sm-6" id="shelter-listings">
+              <!-- <div class="row">
                 <div class="col-12">
                   <ul>
                     <li class="distance">0.0 miles</li>
@@ -78,100 +104,140 @@
                   </ul>
                 </div>
               </div> -->
+            </div>
+
+            <div class="col-12 col-sm-6" id="map" style="height: 600px">
+              <!-- <iframe
+                width="100%"
+                height="100%"
+                style="border: 0"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBfdOo81NF8nSCKTzVEZrucPVkMT8IJHoQ
+    &q=Space+Needle,Seattle+WA"
+              >
+                ></iframe -->
+              >
+            </div>
           </div>
-
-          <div class="col-12 col-sm-6" id="map" style="height: 600px">
-            <iframe width="100%" height="100%" style="border: 0" loading="lazy" allowfullscreen
-              referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBfdOo81NF8nSCKTzVEZrucPVkMT8IJHoQ
-    &q=Space+Needle,Seattle+WA">
-              ></iframe>
+        </div>
+      </section>
+      <div class="container-fluid planning-to-adopt">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="text-center mt-3 mb-4">Planning to Adopt a Pet?</h2>
+          </div>
+          <div class="col-12 col-md-4 adoption-info">
+            <span class="icon"
+              ><svg
+                viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg"
+                style="display: block; height: 48px; width: 48px; stroke: none"
+                aria-hidden="true"
+                role="presentation"
+                focusable="false"
+              >
+                <path
+                  d="m23.0204313 3.00582063c-2.0815427.07751293-4.0715877.92728952-5.5789504 2.43470494l-1.4414809 1.44047443-1.4404171-1.44031065c-1.5845115-1.58335003-3.6983863-2.44068935-5.8929929-2.44068935-2.19416638 0-4.30898823.85772467-5.89177678 2.44051322-1.58391215 1.58390109-2.44156322 3.69775756-2.44156322 5.89278678 0 4.9282095 2.48419629 8.8512108 8.03256412 13.439053l.70954716.5770638.74171734.584714.77413928.5930892c.131739.0995864.2648394.199552.3993065.2999118l.823244.607011.8562953.6171982.8895983.6281103.9231529.6397472 1.5170817 1.0308345 1.3291121-.9009656 1.0589072-.7287753.6612652-.4625621.7010987-.498181.8533598-.6198244c7.3971739-5.4452801 11.0629604-10.1222564 11.0629604-15.8064246 0-2.19559863-.8569151-4.30921968-2.4404957-5.89278925-1.5843319-1.58317036-3.6982062-2.44051075-5.8928043-2.44051075zm.3128687 1.99417937c1.6695137 0 3.2735403.65055751 4.4788526 1.85498605 1.2043504 1.20434208 1.8544474 2.80783678 1.8544474 4.47831395 0 4.2987547-2.6123854 8.1213061-8.009061 12.474023l-.7197183.570835c-.2451788.1913357-.495635.3837563-.7513829.5773445l-.7831323.5843503-.8149664.5918523-.6943428.4933793-.6495182.4543204-1.2444781.8545952-.3599806-.2464089c-.3060116-.2102151-.6062613-.4182535-.900798-.6242279l-.8665202-.6118437c-.1415799-.1009795-.2817437-.2014711-.4204976-.3014889l-.8156535-.594534c-.1331387-.0981789-.2648797-.1959122-.3952291-.2932139l-.7654464-.5787439-.7323414-.5690616c-5.8464087-4.609638-8.4102832-8.3182024-8.4102832-12.7811772 0-1.66972745.65069601-3.27350087 1.85577431-4.47857075 1.20389067-1.20389067 2.80861035-1.85472925 4.47756569-1.85472925 1.6695226 0 3.2735495.6505567 4.4788626 1.85498605l2.8542663 2.8556887 2.8559829-2.85594303c1.2038387-1.20388075 2.8086117-1.85473172 4.4775982-1.85473172z"
+                ></path></svg
+            ></span>
+            <h3>Planning to Adopt a Pet?</h3>
+            <p>
+              Checklist for New Adopters Help make the transition, as smooth as
+              possible.
+            </p>
+            <button type="button" class="btn">Learn More</button>
+          </div>
+          <div class="col-12 col-md-4 adoption-info">
+            <span class="icon"
+              ><svg
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg"
+                style="display: block; height: 48px; width: 48px"
+                aria-hidden="true"
+                role="presentation"
+                focusable="false"
+              >
+                <g stroke="none">
+                  <path
+                    fill-opacity=".2"
+                    d="M24 7.243L9 22.242V41h30V22.243z"
+                  ></path>
+                  <path
+                    d="M22.586 3a2 2 0 0 1 2.701-.117l.127.117 17 17a2 2 0 0 1 .578 1.238l.008.176V43a2 2 0 0 1-1.85 1.995L41 45H7a2 2 0 0 1-1.995-1.85L5 43V21.414a2 2 0 0 1 .467-1.284l.119-.13 17-17zM24 4.414l-17 17V43h10V27a2 2 0 0 1 1.85-1.995L19 25h10a2 2 0 0 1 1.995 1.85L31 27v16h10V21.414l-17-17zM29 27H19v16h10V27z"
+                  ></path>
+                </g></svg
+            ></span>
+            <h3>COVID-19 Resources</h3>
+            <p>
+              Get the latest on adoption processes, learn how local shelters and
+              rescue groups are adapting and find out what you can do to help
+              dogs and cats in need right now.
+            </p>
+            <button type="button" class="btn">Learn More</button>
+          </div>
+          <div class="col-12 col-md-4 adoption-info">
+            <span class="icon"
+              ><svg
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg"
+                style="display: block; height: 48px; width: 48px"
+                aria-hidden="true"
+                role="presentation"
+                focusable="false"
+              >
+                <g stroke="none">
+                  <path
+                    fill-opacity=".2"
+                    d="M29.6784303 18.1843112L24 8.109 18.3215697 18.1843112 6.985 20.471 14.8121068 28.9853275 13.484 40.473 24 35.6607227 34.515 40.473 33.1878932 28.9853275 41.014 20.471z"
+                  ></path>
+                  <path
+                    d="M23.12 1.524l-7.384 13.1L.994 17.6a.958.958 0 0 0-.629 1.573l.085.1 10.178 11.07-1.726 14.941-.002.015a1 1 0 0 0 1.393 1.033l.032-.014L24 40.06l13.799 6.315a.934.934 0 0 0 1.313-.935l-.014-.156-1.727-14.941 10.179-11.07.108-.145c.065-.096.082-.15.138-.338l-.012-.144c-.057-.671-.1-.693-.778-1.046l-14.743-2.976-7.383-13.1C24.677 1.174 24.384 1 24 1s-.677.175-.88.524zm-6.091 14.88L24 4.037l6.971 12.369 13.917 2.808-9.608 10.452 1.629 14.103L24 37.86l-12.91 5.908 1.63-14.103-9.609-10.452 13.918-2.808z"
+                  ></path>
+                </g></svg
+            ></span>
+            <h3>Pet Adoption FAQs</h3>
+            <p>
+              Get answers to frequently asked questions you haven't thought of.
+            </p>
+            <button type="button" class="btn">Learn More</button>
           </div>
         </div>
       </div>
-    </section>
-    <div class="container-fluid planning-to-adopt">
-      <div class="row">
-        <div class="col-12">
-          <h2 class="text-center mt-3 mb-4">Planning to Adopt a Pet?</h2>
-        </div>
-        <div class="col-12 col-md-4 adoption-info">
-          <span class="icon"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
-              style="display: block; height: 48px; width: 48px; stroke: none" aria-hidden="true" role="presentation"
-              focusable="false">
-              <path
-                d="m23.0204313 3.00582063c-2.0815427.07751293-4.0715877.92728952-5.5789504 2.43470494l-1.4414809 1.44047443-1.4404171-1.44031065c-1.5845115-1.58335003-3.6983863-2.44068935-5.8929929-2.44068935-2.19416638 0-4.30898823.85772467-5.89177678 2.44051322-1.58391215 1.58390109-2.44156322 3.69775756-2.44156322 5.89278678 0 4.9282095 2.48419629 8.8512108 8.03256412 13.439053l.70954716.5770638.74171734.584714.77413928.5930892c.131739.0995864.2648394.199552.3993065.2999118l.823244.607011.8562953.6171982.8895983.6281103.9231529.6397472 1.5170817 1.0308345 1.3291121-.9009656 1.0589072-.7287753.6612652-.4625621.7010987-.498181.8533598-.6198244c7.3971739-5.4452801 11.0629604-10.1222564 11.0629604-15.8064246 0-2.19559863-.8569151-4.30921968-2.4404957-5.89278925-1.5843319-1.58317036-3.6982062-2.44051075-5.8928043-2.44051075zm.3128687 1.99417937c1.6695137 0 3.2735403.65055751 4.4788526 1.85498605 1.2043504 1.20434208 1.8544474 2.80783678 1.8544474 4.47831395 0 4.2987547-2.6123854 8.1213061-8.009061 12.474023l-.7197183.570835c-.2451788.1913357-.495635.3837563-.7513829.5773445l-.7831323.5843503-.8149664.5918523-.6943428.4933793-.6495182.4543204-1.2444781.8545952-.3599806-.2464089c-.3060116-.2102151-.6062613-.4182535-.900798-.6242279l-.8665202-.6118437c-.1415799-.1009795-.2817437-.2014711-.4204976-.3014889l-.8156535-.594534c-.1331387-.0981789-.2648797-.1959122-.3952291-.2932139l-.7654464-.5787439-.7323414-.5690616c-5.8464087-4.609638-8.4102832-8.3182024-8.4102832-12.7811772 0-1.66972745.65069601-3.27350087 1.85577431-4.47857075 1.20389067-1.20389067 2.80861035-1.85472925 4.47756569-1.85472925 1.6695226 0 3.2735495.6505567 4.4788626 1.85498605l2.8542663 2.8556887 2.8559829-2.85594303c1.2038387-1.20388075 2.8086117-1.85473172 4.4775982-1.85473172z">
-              </path>
-            </svg></span>
-          <h3>Planning to Adopt a Pet?</h3>
-          <p>
-            Checklist for New Adopters Help make the transition, as smooth as
-            possible.
-          </p>
-          <button type="button" class="btn">Learn More</button>
-        </div>
-        <div class="col-12 col-md-4 adoption-info">
-          <span class="icon"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
-              style="display: block; height: 48px; width: 48px" aria-hidden="true" role="presentation"
-              focusable="false">
-              <g stroke="none">
-                <path fill-opacity=".2" d="M24 7.243L9 22.242V41h30V22.243z"></path>
-                <path
-                  d="M22.586 3a2 2 0 0 1 2.701-.117l.127.117 17 17a2 2 0 0 1 .578 1.238l.008.176V43a2 2 0 0 1-1.85 1.995L41 45H7a2 2 0 0 1-1.995-1.85L5 43V21.414a2 2 0 0 1 .467-1.284l.119-.13 17-17zM24 4.414l-17 17V43h10V27a2 2 0 0 1 1.85-1.995L19 25h10a2 2 0 0 1 1.995 1.85L31 27v16h10V21.414l-17-17zM29 27H19v16h10V27z">
-                </path>
-              </g>
-            </svg></span>
-          <h3>COVID-19 Resources</h3>
-          <p>
-            Get the latest on adoption processes, learn how local shelters and
-            rescue groups are adapting and find out what you can do to help
-            dogs and cats in need right now.
-          </p>
-          <button type="button" class="btn">Learn More</button>
-        </div>
-        <div class="col-12 col-md-4 adoption-info">
-          <span class="icon"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
-              style="display: block; height: 48px; width: 48px" aria-hidden="true" role="presentation"
-              focusable="false">
-              <g stroke="none">
-                <path fill-opacity=".2"
-                  d="M29.6784303 18.1843112L24 8.109 18.3215697 18.1843112 6.985 20.471 14.8121068 28.9853275 13.484 40.473 24 35.6607227 34.515 40.473 33.1878932 28.9853275 41.014 20.471z">
-                </path>
-                <path
-                  d="M23.12 1.524l-7.384 13.1L.994 17.6a.958.958 0 0 0-.629 1.573l.085.1 10.178 11.07-1.726 14.941-.002.015a1 1 0 0 0 1.393 1.033l.032-.014L24 40.06l13.799 6.315a.934.934 0 0 0 1.313-.935l-.014-.156-1.727-14.941 10.179-11.07.108-.145c.065-.096.082-.15.138-.338l-.012-.144c-.057-.671-.1-.693-.778-1.046l-14.743-2.976-7.383-13.1C24.677 1.174 24.384 1 24 1s-.677.175-.88.524zm-6.091 14.88L24 4.037l6.971 12.369 13.917 2.808-9.608 10.452 1.629 14.103L24 37.86l-12.91 5.908 1.63-14.103-9.609-10.452 13.918-2.808z">
-                </path>
-              </g>
-            </svg></span>
-          <h3>Pet Adoption FAQs</h3>
-          <p>
-            Get answers to frequently asked questions you haven't thought of.
-          </p>
-          <button type="button" class="btn">Learn More</button>
+    </main>
+
+    <footer class="mt-auto">
+      <div class="container-fluid bg-gray">
+        <div class="row g-0">
+          <div
+            class="col-12 col-md-10 col-lg-5 d-flex flex-column justify-content-center align-items-center mx-auto"
+          >
+            <img
+              class="footer-logo"
+              src="./assets/images/logo.png"
+              alt="Pawsome Petfinder Footer Logo"
+            />
+            <img
+              class="footer-img-pets"
+              src="./assets/images/footer_img2.jpg"
+              alt="Pet Shelter Animals"
+            />
+          </div>
         </div>
       </div>
-    </div>
-  </main>
+    </footer>
 
-  <footer class="mt-auto">
-    <div class="container-fluid bg-gray">
-      <div class="row g-0">
-        <div class="col-12 col-md-10 col-lg-5 d-flex flex-column justify-content-center align-items-center mx-auto">
-          <img class="footer-logo" src="./assets/images/logo.png" alt="Pawsome Petfinder Footer Logo" />
-          <img class="footer-img-pets" src="./assets/images/footer_img2.jpg" alt="Pet Shelter Animals" />
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
-  <script src="./assets/js/script.js"></script>
-  <!-- Google places api -->
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfdOo81NF8nSCKTzVEZrucPVkMT8IJHoQ&libraries=places&callback=initMap"></script>
-</body>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <!-- Google places api -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfdOo81NF8nSCKTzVEZrucPVkMT8IJHoQ&libraries=places&callback=initMap"></script>
+  </body>
 </html>
