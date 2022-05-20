@@ -1,4 +1,4 @@
 Petfinder API key: yZJnxnm7MRDykndmWxlpmmsUeSOcn0MwkYF7nE1CpCVnBmztQF
-Petfinder secret: 3knFu1WvX735C8SFKEC3gwbvGKkMuCoR6w0wcUoQ
+Petfinder secret: OQtdFz7vReUXiWwtSWmhpe3nSt1gdXfF1P4Q0lM7
 
 Google maps API key: AIzaSyBfdOo81NF8nSCKTzVEZrucPVkMT8IJHoQ
