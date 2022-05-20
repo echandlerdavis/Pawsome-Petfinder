@@ -57,6 +57,7 @@
       <div class="container-fluid shelter-listings-wrap">
         <div class="row">
           <div class="col-12">
+            <div class="col-md-6 col-12">
             <h3>
               We Found <span id="shelterQuantity1"></span> Shelters Near You
             </h3>
@@ -65,6 +66,7 @@
               Pet Finder is powered by Pet Finder's API
             </p>
             <hr />
+          </div>
           </div>
           <div class="col-12 col-sm-6" id="shelter-listings">
             <!-- <div class="row">
@@ -80,11 +82,13 @@
               </div> -->
           </div>
 
-          <div class="col-12 col-sm-6" id="map" style="height: 600px">
-            <iframe width="100%" height="100%" style="border: 0" loading="lazy" allowfullscreen
-              referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBfdOo81NF8nSCKTzVEZrucPVkMT8IJHoQ
-    &q=Space+Needle,Seattle+WA">
-              ></iframe>
+          <div class="col-12 col-sm-6 shelter-graphic-wrap">
+            <figure class="d-flex flex-column">
+              <img class="shelter-graphic" src="./assets/images/shelter_graphics.png" alt="Pawsome Petfinder Shelter Graphic Image" />
+            </figure>
+            <h2>Why adopt a pet?<span>Decause you'll save a life.</span></h2>
+            <p>All animals at a rescue shelter deserve a second chance. They have been lost, given up, or abandoned. They are all unwanted and helpless in their situation. Your adoption provides a new life in a loving home when you choose to adopt a pet rather than shop from a breeder.</p>
+            <p class="learn-more">Learn more about the <a href="https://www.hhhstopeka.org/adopt/top-10-reasons-to-adopt-from-an-animal-shelter/" target="_blank">Top 10 Reasons to Adopt from an Animal Shelter</a> on the Helping Hands Humane Society website.</p>
           </div>
         </div>
       </div>
@@ -107,7 +111,7 @@
             Checklist for New Adopters Help make the transition, as smooth as
             possible.
           </p>
-          <button type="button" class="btn">Learn More</button>
+          <button type="button" class="btn"><a href="https://be.chewy.com/pet-parenting-pet-lovers-dog-adoption-checklist-what-you-need-to-know/" target="_blank">Learn More</a></button>
         </div>
         <div class="col-12 col-md-4 adoption-info">
           <span class="icon"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
@@ -126,7 +130,7 @@
             rescue groups are adapting and find out what you can do to help
             dogs and cats in need right now.
           </p>
-          <button type="button" class="btn">Learn More</button>
+          <button type="button" class="btn"><a href="https://sites.google.com/americanpetsalive.org/ampa-covid19/covid-19-protocols" target="_blank">Learn More</a></button>
         </div>
         <div class="col-12 col-md-4 adoption-info">
           <span class="icon"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
@@ -145,7 +149,7 @@
           <p>
             Get answers to frequently asked questions you haven't thought of.
           </p>
-          <button type="button" class="btn">Learn More</button>
+          <button type="button" class="btn"><a href="https://www.animalhumanesociety.org/adoption/adoption-faq">Learn More</a></button>
         </div>
       </div>
     </div>
@@ -169,6 +173,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
   <script src="./assets/js/script.js"></script>
+
   <!-- Google places api -->
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfdOo81NF8nSCKTzVEZrucPVkMT8IJHoQ&libraries=places&callback=initMap"></script>
