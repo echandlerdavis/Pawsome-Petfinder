@@ -63,8 +63,13 @@ function search(event) {
   event.preventDefault();
   var key = "yZJnxnm7MRDykndmWxlpmmsUeSOcn0MwkYF7nE1CpCVnBmztQF";
   var secret = "OQtdFz7vReUXiWwtSWmhpe3nSt1gdXfF1P4Q0lM7";
+<<<<<<< HEAD
   var searchList= document.getElementById("list-head")
   searchList.removeAttribute("class", "hide")
+=======
+  var searchList = document.getElementById("list-head");
+  searchList.removeAttribute("class", "hide");
+>>>>>>> 3a21d481505af429f043f6bf64d1b89a8e0dabf9
 
   // get authorization token
   fetch("https://api.petfinder.com/v2/oauth2/token", {
