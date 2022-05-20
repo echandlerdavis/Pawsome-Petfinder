@@ -1,8 +1,10 @@
 :root {
+  --white: #ffffff;
   --darkblue: #445976;
   --lightgray: #f2f2f2;
   --gray: #717171;
   --orange: #f9ab46;
+  --darkorange: #d07706;
   --darkgray: #232323;
   --nerko: 'Nerko One', cursive;
   --gochi: 'Gochi Hand', cursive;
@@ -52,6 +54,36 @@ header p {
   background-repeat: no-repeat;
   background-position: center;
 }
+.hide {
+  display: none;
+}
+
+.shelter-listings-wrap {
+  padding: 0px 100px;
+}
+.shelter-graphic-wrap {
+  padding: 0px 100px;
+}
+.shelter-graphic-wrap h2 {
+  font-family: var(--nerko);
+  color: var(--gray);
+  text-align: center;
+}
+.shelter-graphic-wrap h2 span {
+  color: var(--orange);
+  display: block;
+}
+.shelter-graphic-wrap p {
+  font-family: var(--opensans);
+  font-weight: 400;
+}
+.shelter-graphic-wrap p.learn-more {
+  font-weight: 700;
+}
+.shelter-graphic-wrap a {
+  color: var(--darkorange);
+  font-style: italic;
+}
 
 .shelter-listings-wrap {
   padding: 0px 100px;
@@ -73,7 +105,14 @@ header p {
 .btn.submit {
   background-color: var(--orange);
   font-family: var(--opensans);
-  color: #fff;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.btn.clear {
+  background-color: var(--gray);
+  font-family: var(--opensans);
+  color: var(--white);
   font-weight: 700;
 }
 
@@ -128,12 +167,18 @@ header p {
 }
 
 .row .adoption-info .btn:hover {
-  color: #fff;
+  color: var(--white);
   border: 1px solid #f9ab46;
   background-color: var(--orange);
   opacity: .8;
 }
-
+.row .adoption-info a {
+  color: var(--darkgray); 
+  text-decoration: none;
+}
+.row .adoption-info a:hover {
+  color: var(--white);
+}
 .row .adoption-info p {}
 
 footer .col-2 {
@@ -155,10 +200,13 @@ footer .footer-logo {
   background-position: center;
 }
 
+<<<<<<< HEAD
 .hide {
   display: none;
 }
 
+=======
+>>>>>>> 3903352df00cba5c3f4e9c84c38eb916c4f6eb78
 
 #shelter-listings {}
 
@@ -191,6 +239,12 @@ footer .footer-logo {
   .planning-to-adopt {
     padding: 40px 20px;
   }
+<<<<<<< HEAD
+=======
+  .shelter-graphic-wrap {
+    padding: 0px 0px 0 100px;
+  }
+>>>>>>> 3903352df00cba5c3f4e9c84c38eb916c4f6eb78
 }
 
 /* Desktops  */
@@ -211,6 +265,12 @@ footer .footer-logo {
   .logo {
     width: 70%;
   }
+<<<<<<< HEAD
+=======
+  .shelter-graphic-wrap {
+    padding: 0px 20px 0 100px;
+  }
+>>>>>>> 3903352df00cba5c3f4e9c84c38eb916c4f6eb78
 }
 
 /* Tablets  */
