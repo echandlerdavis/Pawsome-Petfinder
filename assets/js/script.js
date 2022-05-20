@@ -9,7 +9,9 @@ var locationLat;
 var locationLng;
 var locationPost;
 var searchButtonEl = document.querySelector("#search-button");
-
+var firstBtn = document.querySelector("#firstBtn");
+var nextBtn = document.querySelector("#nextBtn");
+var pageNumber = 1;
 var map;
 
 function initMap() {
@@ -59,11 +61,12 @@ function clear() {
 searchButtonEl.addEventListener("click", search);
 
 // search function
+var token;
 function search(event) {
   event.preventDefault();
   var key = "yZJnxnm7MRDykndmWxlpmmsUeSOcn0MwkYF7nE1CpCVnBmztQF";
   var secret = "OQtdFz7vReUXiWwtSWmhpe3nSt1gdXfF1P4Q0lM7";
-  var token;
+  // var token;
 
   // get authorization token
   fetch("https://api.petfinder.com/v2/oauth2/token", {
@@ -82,33 +85,35 @@ function search(event) {
       token = data.access_token;
     })
     .then(() => {
-      // use token to fetch organizations
-
-      // city input removes USA from Google Places auto complete; PetFinder API doesn't return results
-      fetch(
-        `https://api.petfinder.com/v2/organizations?&location=${cityInput.value.replace(
-          ", USA",
-          ""
-        )}&sort=distance`,
-        {
-          method: "GET",
-          mode: "cors",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: "Bearer " + token,
-          },
-        }
-      )
-        .then((res) => res.json())
-        .then((data) => {
-          orgList(data);
-        })
-        .catch((err) => console.error(err));
+      pageNumber = 1;
+      getOrg();
     });
 
   // center map
   centerMap();
 }
+
+nextBtn.addEventListener("click", nextPage);
+function nextPage(event) {
+  event.preventDefault();
+  listing = "";
+  pageNumber++;
+  // city input removes USA from Google Places auto complete; PetFinder API doesn't return results
+  getOrg();
+}
+
+firstBtn.addEventListener("click", function (event) {
+  event.preventDefault();
+  PageOne();
+});
+
+function PageOne() {
+  console.log("pageone");
+  listing = "";
+  pageNumber = 1;
+  getOrg();
+}
+
 const shelterTitle1 = document.querySelector("#shelterQuantity1");
 const shelterTitle2 = document.querySelector("#shelterQuantity2");
 const shelterList = document.querySelector("#shelter-listings");
@@ -116,7 +121,7 @@ var listing = "";
 
 function orgList(data) {
   console.log(data);
-  shelterTitle1.textContent = data.organizations.length;
+  shelterTitle1.textContent = data.pagination.total_count;
   shelterTitle2.textContent = data.organizations.length;
   shelterList.innerHTML = "";
   for (var i = 0; i < data.organizations.length; i++) {
@@ -138,4 +143,27 @@ function orgList(data) {
   }
   shelterList.innerHTML = listing;
   // cityInput.value = "";
+}
+
+// fetch pages from Petfinder API
+function getOrg() {
+  fetch(
+    `https://api.petfinder.com/v2/organizations?page=${pageNumber}&location=${cityInput.value.replace(
+      ", USA",
+      ""
+    )}&sort=distance`,
+    {
+      method: "GET",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + token,
+      },
+    }
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      orgList(data);
+    })
+    .catch((err) => console.error(err));
 }
