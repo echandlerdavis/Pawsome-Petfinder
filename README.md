@@ -23,7 +23,7 @@ The Day Scheduler is organized in the following files:
 
 **What the application looks like**
 
-![Gif of Homepage]()
+![Gif of Homepage](./assets/images/PawsomePetfinderGif.gif)
 
 **Link to deployed version of Pawsome Petfinder**
 

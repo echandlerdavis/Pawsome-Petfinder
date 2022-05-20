@@ -187,11 +187,8 @@ footer .footer-logo {
   background-position: center;
 }
 
-<<<<<<< HEAD
-=======
 #shelter-listings {
 }
->>>>>>> 3a21d481505af429f043f6bf64d1b89a8e0dabf9
 
 #shelter-listings ul {
   padding-left: 0px;
@@ -281,13 +278,9 @@ footer .footer-logo {
 }
 
 /* Small smartphones */
-<<<<<<< HEAD
-@media screen and (max-width: 576px) {}
-=======
 @media screen and (max-width: 576px) {
 }
 
 .hide {
   display: none;
 }
->>>>>>> 3a21d481505af429f043f6bf64d1b89a8e0dabf9
