@@ -6,9 +6,9 @@
   --orange: #f9ab46;
   --darkorange: #d07706;
   --darkgray: #232323;
-  --nerko: 'Nerko One', cursive;
-  --gochi: 'Gochi Hand', cursive;
-  --opensans: 'Open Sans', sans-serif;
+  --nerko: "Nerko One", cursive;
+  --gochi: "Gochi Hand", cursive;
+  --opensans: "Open Sans", sans-serif;
 }
 
 .bg-gray {
@@ -53,9 +53,6 @@ header p {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
-.hide {
-  display: none;
 }
 
 .shelter-listings-wrap {
@@ -113,7 +110,7 @@ header p {
 }
 
 .btn.submit:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .icon svg {
@@ -159,16 +156,17 @@ header p {
   color: var(--white);
   border: 1px solid #f9ab46;
   background-color: var(--orange);
-  opacity: .8;
+  opacity: 0.8;
 }
 .row .adoption-info a {
-  color: var(--darkgray); 
+  color: var(--darkgray);
   text-decoration: none;
 }
 .row .adoption-info a:hover {
   color: var(--white);
 }
-.row .adoption-info p {}
+.row .adoption-info p {
+}
 
 footer .col-2 {
   display: flex;
@@ -189,8 +187,8 @@ footer .footer-logo {
   background-position: center;
 }
 
-
-#shelter-listings {}
+#shelter-listings {
+}
 
 #shelter-listings ul {
   padding-left: 0px;
@@ -213,8 +211,6 @@ footer .footer-logo {
 #shelter-listings li.distance {
   float: right;
 }
-
-
 
 /* media queries */
 @media screen and (max-width: 1399px) {
@@ -282,4 +278,9 @@ footer .footer-logo {
 }
 
 /* Small smartphones */
-@media screen and (max-width: 576px) {}
+@media screen and (max-width: 576px) {
+}
+
+.hide {
+  display: none;
+}
