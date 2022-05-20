@@ -1,8 +1,10 @@
 :root {
+  --white: #ffffff;
   --darkblue: #445976;
   --lightgray: #f2f2f2;
   --gray: #717171;
   --orange: #f9ab46;
+  --darkorange: #d07706;
   --darkgray: #232323;
   --nerko: 'Nerko One', cursive;
   --gochi: 'Gochi Hand', cursive;
@@ -12,7 +14,7 @@
 .bg-gray {
   background-color: var(--lightgray);
   max-width: 100%;
-  padding: 50px 0;
+  padding: 30px 0;
 }
 
 footer .bg-gray {
@@ -41,13 +43,46 @@ header p {
   margin: 15px 0;
 }
 
-.logo {}
+.logo {
+  margin: 0 auto;
+  width: 70%;
+}
 
 .hero {
   background: url(../images/hero_img_taller.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+.hide {
+  display: none;
+}
+
+.shelter-listings-wrap {
+  padding: 0px 100px;
+}
+.shelter-graphic-wrap {
+  padding: 0px 100px;
+}
+.shelter-graphic-wrap h2 {
+  font-family: var(--nerko);
+  color: var(--gray);
+  text-align: center;
+}
+.shelter-graphic-wrap h2 span {
+  color: var(--orange);
+  display: block;
+}
+.shelter-graphic-wrap p {
+  font-family: var(--opensans);
+  font-weight: 400;
+}
+.shelter-graphic-wrap p.learn-more {
+  font-weight: 700;
+}
+.shelter-graphic-wrap a {
+  color: var(--darkorange);
+  font-style: italic;
 }
 
 #shelter-listings {
@@ -66,7 +101,14 @@ header p {
 .btn.submit {
   background-color: var(--orange);
   font-family: var(--opensans);
-  color: #fff;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.btn.clear {
+  background-color: var(--gray);
+  font-family: var(--opensans);
+  color: var(--white);
   font-weight: 700;
 }
 
@@ -81,6 +123,7 @@ header p {
 
 .planning-to-adopt {
   color: var(--darkgray);
+  padding: 40px 100px;
 }
 
 .planning-to-adopt h2 {
@@ -113,12 +156,18 @@ header p {
 }
 
 .row .adoption-info .btn:hover {
-  color: #fff;
+  color: var(--white);
   border: 1px solid #f9ab46;
   background-color: var(--orange);
   opacity: .8;
 }
-
+.row .adoption-info a {
+  color: var(--darkgray); 
+  text-decoration: none;
+}
+.row .adoption-info a:hover {
+  color: var(--white);
+}
 .row .adoption-info p {}
 
 footer .col-2 {
@@ -130,7 +179,16 @@ footer .col-2 {
 footer .footer-logo {
   padding: 10px;
   min-height: 100px;
+  width: 300px;
 }
+
+.bg-img {
+  background: url(../images/footer_img2.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 
 #shelter-listings {}
 
@@ -155,3 +213,73 @@ footer .footer-logo {
 #shelter-listings li.distance {
   float: right;
 }
+
+
+
+/* media queries */
+@media screen and (max-width: 1399px) {
+  .planning-to-adopt {
+    padding: 40px 20px;
+  }
+  .shelter-graphic-wrap {
+    padding: 0px 0px 0 100px;
+  }
+}
+
+/* Desktops  */
+@media screen and (max-width: 1199px) {
+  .hero {
+    background-position: 40% 50%;
+  }
+
+  .shelter-listings-wrap {
+    padding: 0px 40px;
+  }
+
+  footer .footer-logo {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .logo {
+    width: 70%;
+  }
+  .shelter-graphic-wrap {
+    padding: 0px 20px 0 100px;
+  }
+}
+
+/* Tablets  */
+@media screen and (max-width: 992px) {
+  .hero {
+    background-position: 40% 50%;
+  }
+
+  footer .footer-logo {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    width: 80%;
+  }
+}
+
+/* Large phones */
+@media screen and (max-width: 768px) {
+  .hero {
+    background-position: 40% 50%;
+  }
+
+  footer .footer-logo {
+    margin: 0 auto;
+    width: 280px;
+  }
+
+  footer .footer-img-pets {
+    width: 380px;
+  }
+}
+
+/* Small smartphones */
+@media screen and (max-width: 576px) {}
