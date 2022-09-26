@@ -1,4 +1,4 @@
-# Project-1-Group-7 - Pawsome Pet Finder
+# Pawsome Pet Finder
 
  **What does this application do and why?**
 
